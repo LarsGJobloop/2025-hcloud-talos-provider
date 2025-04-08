@@ -1,0 +1,5 @@
+# Sensitive information
+*.tfvars*
+*.tfstate*
+# 3rd Party dependencies
+.terraform

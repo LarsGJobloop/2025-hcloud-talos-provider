@@ -4,6 +4,8 @@ metadata:
   name: podinfo
   annotations:
     load-balancer.hetzner.cloud/location: hel1
+    load-balancer.hetzner.cloud/ipv6-disabled: true
+    load-balancer.hetzner.cloud/protocol: http
 spec:
   type: LoadBalancer
   selector:

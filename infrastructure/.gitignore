@@ -3,3 +3,6 @@
 *.tfstate*
 # 3rd Party dependencies
 .terraform
+# Ensure exported connection contexts are not stored in Git
+kubeconfig
+talosconfig

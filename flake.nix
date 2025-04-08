@@ -39,8 +39,10 @@
             k3d # Local Kubernetes cluster CLI
             fluxcd # GitOps Operator CLI
             kubectl # Kubernetes CLI
+            talosctl # Talos CLI
             k9s # Kubernetes TUI
             docker # Container CLI
+            packer # Tool for creating machine images from common source
           ];
         };
       });

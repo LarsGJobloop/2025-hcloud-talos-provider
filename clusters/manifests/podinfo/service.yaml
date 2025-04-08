@@ -5,7 +5,7 @@ metadata:
   annotations:
     load-balancer.hetzner.cloud/location: hel1
     load-balancer.hetzner.cloud/ipv6-disabled: true
-    load-balancer.hetzner.cloud/protocol: http
+    load-balancer.hetzner.cloud/protocol: tcp
 spec:
   type: LoadBalancer
   selector:

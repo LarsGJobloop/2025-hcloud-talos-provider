@@ -5,7 +5,7 @@ metadata:
   namespace: ingress
 
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
     - port: 8080
       targetPort: dashboard
@@ -17,6 +17,10 @@ kind: Service
 metadata:
   name: traefik-web-service
   namespace: ingress
+  annotations:
+    load-balancer.hetzner.cloud/location: hel1
+    load-balancer.hetzner.cloud/ipv6-disabled: true
+    load-balancer.hetzner.cloud/protocol: tcp
 
 spec:
   type: LoadBalancer

@@ -3,9 +3,16 @@ kind: Service
 metadata:
   name: traefik-dashboard-service
   namespace: ingress
+  annotations:
+    load-balancer.hetzner.cloud/location: hel1
+    load-balancer.hetzner.cloud/ipv6-disabled: true
+    load-balancer.hetzner.cloud/protocol: http
+    load-balancer.hetzner.cloud/health-check-port: 8080
+    load-balancer.hetzner.cloud/health-check-http-path: /ping
+    load-balancer.hetzner.cloud/use-private-ip: true
 
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
     - port: 8080
       targetPort: dashboard
@@ -21,6 +28,9 @@ metadata:
     load-balancer.hetzner.cloud/location: hel1
     load-balancer.hetzner.cloud/ipv6-disabled: true
     load-balancer.hetzner.cloud/protocol: http
+    load-balancer.hetzner.cloud/health-check-port: 8080
+    load-balancer.hetzner.cloud/health-check-http-path: /ping
+    load-balancer.hetzner.cloud/use-private-ip: true
 
 spec:
   type: LoadBalancer

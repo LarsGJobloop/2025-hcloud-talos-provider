@@ -21,8 +21,12 @@ spec:
         - name: traefik
           image: traefik:v3.3
           args:
-            - --api.insecure
-            - --providers.kubernetesingress
+            - "--api.insecure"
+            - "--providers.kubernetesingress"
+            - "--entrypoints.web.address=:80"
+            - "--entrypoints.dashboard.address=:8080"
+            - "--ping=true"
+            - "--ping.terminatingStatusCode=204"
           ports:
             - name: web
               containerPort: 80
